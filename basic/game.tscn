@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://basic/game.gd" type="Script" id=1]
+[ext_resource path="res://basic/stack.tscn" type="PackedScene" id=2]
+
+[node name="Game" type="Node"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 80.0 ],
+"_edit_vertical_guides_": [ 160.0 ]
+}
+
+[node name="Stack" parent="." instance=ExtResource( 2 )]
+position = Vector2( 160, 80 )
+
+[node name="Hand" type="Position2D" parent="."]
+position = Vector2( 160, 166 )

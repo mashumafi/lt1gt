@@ -9,6 +9,31 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Area2D",
+"class": "Card",
+"language": "GDScript",
+"path": "res://core/card.gd"
+}, {
+"base": "Reference",
+"class": "CardData",
+"language": "GDScript",
+"path": "res://core/card_data.gd"
+}, {
+"base": "Reference",
+"class": "Cards",
+"language": "GDScript",
+"path": "res://core/cards.gd"
+}, {
+"base": "Area2D",
+"class": "Hand",
+"language": "GDScript",
+"path": "res://basic/hand.gd"
+}, {
+"base": "Reference",
+"class": "Random",
+"language": "GDScript",
+"path": "res://core/random.gd"
+}, {
 "base": "Reference",
 "class": "SceneData",
 "language": "GDScript",
@@ -19,14 +44,25 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/game-template/scenes.gd"
 }, {
+"base": "Area2D",
+"class": "Stack",
+"language": "GDScript",
+"path": "res://basic/stack.gd"
+}, {
 "base": "CanvasLayer",
 "class": "Transition",
 "language": "GDScript",
 "path": "res://addons/game-template/transition/transition.gd"
 } ]
 _global_script_class_icons={
+"Card": "",
+"CardData": "",
+"Cards": "",
+"Hand": "",
+"Random": "",
 "SceneData": "",
 "Scenes": "",
+"Stack": "",
 "Transition": ""
 }
 
@@ -51,6 +87,10 @@ property_name=1
 
 [display]
 
+window/size/width=320
+window/size/height=180
+window/size/test_width=1920
+window/size/test_height=1080
 window/dpi/allow_hidpi=true
 window/stretch/mode="2d"
 window/stretch/aspect="expand"
