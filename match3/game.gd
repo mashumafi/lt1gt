@@ -3,6 +3,8 @@ extends Node
 const Card := preload("res://core/card.tscn")
 
 func _ready() -> void:
+	randomize()
+
 	var card := Card.instance()
 	add_child(card)
 	var colors := Cards.get_color_ids(2)

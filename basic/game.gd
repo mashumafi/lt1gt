@@ -9,6 +9,8 @@ onready var hand := $Hand as Position2D
 var hand_size := STARTING_HAND_SIZE
 
 func _ready() -> void:
+	randomize()
+
 	stack.set_card_data(Cards.create_random())
 	deal()
 
@@ -28,7 +30,7 @@ func deal() -> void:
 		var hand_card := Hand.instance()
 		hand_card.connect("dropped", self, "_card_dropped", [hand_card])
 		hand.add_child(hand_card)
-		hand_card.card.position = Vector2(180 + 64, -14)
+		hand_card.card.position = Vector2(180 + cards.size() / 2 * 20, -14)
 		hand_card.set_card_data(card)
 	space_out_cards(1.25)
 
