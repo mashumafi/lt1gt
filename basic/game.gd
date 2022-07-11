@@ -28,16 +28,16 @@ func deal() -> void:
 		var hand_card := Hand.instance()
 		hand_card.connect("dropped", self, "_card_dropped", [hand_card])
 		hand.add_child(hand_card)
-		hand_card.card.position = Vector2(180, -14)
+		hand_card.card.position = Vector2(180 + 64, -14)
 		hand_card.set_card_data(card)
-	space_out_cards(2.0)
+	space_out_cards(1.25)
 
 func space_out_cards(decay := 1.0) -> void:
 	var delay := 1.0
 	for i in hand.get_child_count():
 		delay /= decay
 		var offset = -9.0 * hand.get_child_count() + 4.5 + 18.0 * i
-		hand.get_child(i).animate(Vector2.RIGHT * offset, delay)
+		hand.get_child(i).animate(Vector2.RIGHT * offset, 1.0 - delay)
 
 func _card_dropped(hand_card: Hand) -> void:
 	if stack.inside and Cards.are_neighbors(stack.get_card_data(), hand_card.get_card_data()):
