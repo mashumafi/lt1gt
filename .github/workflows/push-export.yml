@@ -7,7 +7,6 @@ on:
 env:
   GODOT_VERSION: 3.4.4
   EXPORT_NAME: godot-game-template
-  ITCH_IO: ${{ true }} #set to true if you want to enable automatic itch.io deploy
   RELEASE_ANDROID: ${{ false }} #set to  true if you want to enable automatic android release export
 
 jobs:
@@ -35,7 +34,6 @@ jobs:
       - name: Zip Folder
         run: zip -r itch.zip build/windows
       - name: Deploy to itch.io
-        if: ${{ env.ITCH_IO==true }}
         uses: josephbmanley/butler-publish-itchio-action@master
         env:
           BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
@@ -68,7 +66,6 @@ jobs:
       - name: Zip Folder
         run: zip -r itch.zip build/linux
       - name: Deploy to itch.io
-        if: ${{ env.ITCH_IO==true }}
         uses: josephbmanley/butler-publish-itchio-action@master
         env:
           BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
@@ -111,7 +108,6 @@ jobs:
       - name: Zip Folder
         run: zip -r itch.zip build/web
       - name: Deploy to itch.io
-        if: ${{ env.ITCH_IO==true }}
         uses: josephbmanley/butler-publish-itchio-action@master
         env:
           BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
@@ -144,7 +140,6 @@ jobs:
       - name: Zip Folder
         run: zip -r itch.zip build/mac
       - name: Deploy to itch.io
-        if: ${{ env.ITCH_IO==true }}
         uses: josephbmanley/butler-publish-itchio-action@master
         env:
           BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
@@ -193,7 +188,6 @@ jobs:
       - name: Zip Folder
         run: zip -r itch.zip build/android
       - name: Deploy to itch.io
-        if: ${{ env.ITCH_IO==true }}
         uses: josephbmanley/butler-publish-itchio-action@master
         env:
           BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
