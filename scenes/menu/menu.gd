@@ -23,3 +23,10 @@ func _basic_pressed():
 		show_progress_bar = false
 	}
 	Game.change_scene("res://basic/game.tscn", params)
+
+
+func _updown_pressed():
+	var params = {
+		show_progress_bar = false
+	}
+	Game.change_scene("res://updown/game.tscn", params)

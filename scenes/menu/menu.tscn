@@ -38,6 +38,7 @@ margin_right = 320.0
 margin_bottom = 88.0
 focus_neighbour_bottom = NodePath("../ExitButton")
 focus_next = NodePath("../ExitButton")
+disabled = true
 text = "UpDown"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -49,6 +50,7 @@ margin_right = 320.0
 margin_bottom = 132.0
 focus_neighbour_bottom = NodePath("../ExitButton")
 focus_next = NodePath("../ExitButton")
+disabled = true
 text = "Match 3"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -64,6 +66,5 @@ __meta__ = {
 }
 
 [connection signal="pressed" from="VBoxContainer/BasicButton" to="." method="_basic_pressed"]
-[connection signal="pressed" from="VBoxContainer/UpDownButton" to="." method="_on_PlayButton_pressed"]
-[connection signal="pressed" from="VBoxContainer/MatchButton" to="." method="_on_PlayButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/UpDownButton" to="." method="_updown_pressed"]
 [connection signal="pressed" from="VBoxContainer/ExitButton" to="." method="_on_ExitButton_pressed"]
