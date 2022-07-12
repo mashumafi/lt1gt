@@ -40,6 +40,12 @@ func space_out_cards(decay := 1.0) -> void:
 		delay /= decay
 		var offset = -9.0 * hand.get_child_count() + 4.5 + 18.0 * i
 		hand.get_child(i).animate(Vector2.RIGHT * offset, 1.0 - delay)
+		var card : Card = hand.get_child(i).card
+		var card_data : CardData = card.data
+		if Cards.are_neighbors(card_data, stack.card.data):
+			card.set_highlight(Color.white)
+		else:
+			card.set_highlight(Color.transparent)
 
 func _card_dropped(hand_card: Hand) -> void:
 	if stack.inside and Cards.are_neighbors(stack.get_card_data(), hand_card.get_card_data()):

@@ -7,19 +7,19 @@ enum Colors {Red, Green, Blue, Yellow, Max}
 static func get_border_texture() -> AtlasTexture:
 	var border_texture := AtlasTexture.new()
 	border_texture.atlas = preload("cards.png")
-	border_texture.region = Rect2(3, 3, 16, 23)
+	border_texture.region = Rect2(4, 4, 16, 24)
 	return border_texture
 
 static func get_card_front_texture() -> AtlasTexture:
 	var card_front_texture := AtlasTexture.new()
 	card_front_texture.atlas = preload("cards.png")
-	card_front_texture.region = Rect2(22, 1, 20, 28)
+	card_front_texture.region = Rect2(25, 2, 20, 28)
 	return card_front_texture
 
 static func get_card_back_texture() -> AtlasTexture:
 	var card_back_texture := AtlasTexture.new()
 	card_back_texture.atlas = preload("cards.png")
-	card_back_texture.region = Rect2(43, 1, 20, 28)
+	card_back_texture.region = Rect2(48, 2, 20, 28)
 	return card_back_texture
 
 static func get_icon_texture(icon: int) -> AtlasTexture:

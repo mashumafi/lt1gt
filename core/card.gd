@@ -5,6 +5,8 @@ onready var front := $Front as Sprite
 onready var border := $Border as Sprite
 onready var icon := $Icon as Sprite
 onready var wild := $Wild as Position2D
+onready var highlight := $Highlight as Sprite
+onready var tween := $Tween as Tween
 
 var data : CardData setget set_data, get_data
 
@@ -23,3 +25,7 @@ func set_data(p_data: CardData) -> void:
 
 func get_data() -> CardData:
 	return data
+
+func set_highlight(color: Color) -> void:
+	tween.interpolate_property(highlight, "self_modulate", highlight.self_modulate, color, 1, Tween.TRANS_EXPO, Tween.EASE_OUT)
+	tween.start()
