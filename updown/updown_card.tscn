@@ -1,0 +1,15 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://core/card.tscn" type="PackedScene" id=1]
+[ext_resource path="res://core/icons.png" type="Texture" id=2]
+[ext_resource path="res://updown/updown_card.gd" type="Script" id=3]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 2 )
+region = Rect2( 159, 0, 15, 10 )
+
+[node name="UpDownCard" instance=ExtResource( 1 )]
+script = ExtResource( 3 )
+
+[node name="Arrow" type="Sprite" parent="." index="7"]
+texture = SubResource( 1 )

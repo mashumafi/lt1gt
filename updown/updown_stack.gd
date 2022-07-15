@@ -1,16 +1,18 @@
-extends Node
+class_name UpDownStack
+extends Position2D
 
+onready var card := $Card as UpDownCard
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+var inside := false
 
+func set_card_data(p_card_data: UpDownCardData) -> void:
+	card.data = p_card_data
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+func get_card_data() -> UpDownCardData:
+	return UpDownCardData.new(card.data.icon, card.data.color, card.is_negative())
 
+func _mouse_entered():
+	inside = true
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _mouse_exited():
+	inside = false

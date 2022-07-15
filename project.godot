@@ -53,6 +53,31 @@ _global_script_classes=[ {
 "class": "Transition",
 "language": "GDScript",
 "path": "res://addons/game-template/transition/transition.gd"
+}, {
+"base": "Card",
+"class": "UpDownCard",
+"language": "GDScript",
+"path": "res://updown/updown_card.gd"
+}, {
+"base": "CardData",
+"class": "UpDownCardData",
+"language": "GDScript",
+"path": "res://updown/updown_card_data.gd"
+}, {
+"base": "Reference",
+"class": "UpDownCards",
+"language": "GDScript",
+"path": "res://updown/updown_cards.gd"
+}, {
+"base": "Area2D",
+"class": "UpDownHand",
+"language": "GDScript",
+"path": "res://updown/updown_hand.gd"
+}, {
+"base": "Position2D",
+"class": "UpDownStack",
+"language": "GDScript",
+"path": "res://updown/updown_stack.gd"
 } ]
 _global_script_class_icons={
 "Card": "",
@@ -63,7 +88,12 @@ _global_script_class_icons={
 "SceneData": "",
 "Scenes": "",
 "Stack": "",
-"Transition": ""
+"Transition": "",
+"UpDownCard": "",
+"UpDownCardData": "",
+"UpDownCards": "",
+"UpDownHand": "",
+"UpDownStack": ""
 }
 
 [application]

@@ -38,7 +38,6 @@ margin_right = 320.0
 margin_bottom = 88.0
 focus_neighbour_bottom = NodePath("../ExitButton")
 focus_next = NodePath("../ExitButton")
-disabled = true
 text = "UpDown"
 __meta__ = {
 "_edit_use_anchors_": false

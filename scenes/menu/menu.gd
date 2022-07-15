@@ -4,7 +4,9 @@ extends Control
 func _ready():
 	if OS.has_feature('HTML5'):
 		$VBoxContainer/ExitButton.queue_free()
-
+	print("Oh hello fellow developer!")
+	print("Follow me at https://twitter.com/mashumafi")
+	print("Find the source code here: https://github.com/mashumafi/lt1gt")
 
 func _on_ExitButton_pressed() -> void:
 	# gently shutdown the game
