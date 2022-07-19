@@ -32,3 +32,10 @@ func _updown_pressed():
 		show_progress_bar = false
 	}
 	Game.change_scene("res://updown/game.tscn", params)
+
+
+func _match_pressed():
+	var params = {
+		show_progress_bar = false
+	}
+	Game.change_scene("res://match3/game.tscn", params)
